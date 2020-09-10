@@ -67,8 +67,8 @@ def txt_editor(data_idx):
 
 options = webdriver.ChromeOptions()
 options.add_argument('headless')
-driver = webdriver.Chrome(chrome_options=options)
-driver = webdriver.Chrome('./chromedriver')
+driver = webdriver.Chrome(chrome_options=options)          # running silent-mode ( no browser )
+# driver = webdriver.Chrome('./chromedriver')              # Uncomment to see browser
 driver.implicitly_wait(3)
 
 
@@ -77,21 +77,12 @@ with open('googleShoppingList.csv', 'rt') as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=',')
     line_count = 0
     for row in csv_reader:
-        # print("row:", row)
-        # print(" 0, 0 ", row[0])
-        # print(" 0, 1 ", row[1])
-
         threshold = row[0]
         googleAddr = row[1]
 
-   #     googleAddr = str(args.accumulate(args.Address))
         driver.get(googleAddr)
-
-        #___main___
-        # if len(driver.find_elements_by_class_name("sh-btn__background")) > 0:
-        #     driver.find_element_by_xpath("//*[@class ='sh-btn__background']").click()
-
         product_name, addrList, price_list = get_prices()
+   #     googleAddr = str(args.accumulate(args.Address))
    #     threshold = args.accumulate(args.TargetPrice)
         good_prices = []
 
