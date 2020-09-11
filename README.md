@@ -6,7 +6,7 @@ selenium version == 3.141.0 <br>
 webdriver-manager == 3.2.2 <br>
 <br>
 Chrome version == 83 
-<br>
+ <br> <br>
 ** Usage ** <br>
 1.	Search target product in Google Shopping<br>
 <img src="Screenshots/Screenshot1.jpg"  width="600">
