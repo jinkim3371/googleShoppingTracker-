@@ -6,5 +6,10 @@ selenium version == 3.141.0 <br>
 webdriver-manager == 3.2.2 <br>
 <br>
 Chrome version == 83 
+<br>
+** Usage ** <br>
+![Alt text](/Screenshots/screenshot1.jpg?raw=true "Google Shopping Search")
+
+
 
 
