@@ -16,3 +16,9 @@ Chrome version == 83
 <img src="Screenshots/Screenshot3.jpg"  width="600">
 4.	Type target price & paste the URL in googleShoppingList.csv <br>
 <img src="Screenshots/Screenshot4.jpg"  width="600">
+
+Run <br>
+Python Google Shopping Crwaler.py  <br>
+ <br>
+<Reference>  <br>
+https://www.digitaltrends.com/mobile/how-to-send-a-text-from-your-email-account/
