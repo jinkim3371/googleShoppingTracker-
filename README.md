@@ -9,7 +9,7 @@ Chrome version == 83
 <br>
 ** Usage ** <br>
 
-<img src="Screenshots/Screenshot1.jpg"  width="300>
+<img src="Screenshots/Screenshot1.jpg"  width="300">
 
 
 
