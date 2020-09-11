@@ -8,7 +8,7 @@ webdriver-manager == 3.2.2 <br>
 Chrome version == 83 
 <br>
 ** Usage ** <br>
-![image](Screenshots/Screenshot1.jpg "Google Shopping Search")
+![image](Screenshots/Screenshot1.jpg "Google Shopping Search") { width = 50% }
 
 
 
