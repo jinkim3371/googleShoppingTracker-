@@ -8,8 +8,8 @@ webdriver-manager == 3.2.2 <br>
 Chrome version == 83 
 <br>
 ** Usage ** <br>
-![image](Screenshots/Screenshot1.jpg "Google Shopping Search")
-<img src="Screenshots/Screenshot1.jpg"  width="120" height="120">
+##![image](Screenshots/Screenshot1.jpg "Google Shopping Search")
+<img src="Screenshots/Screenshot1.jpg"  width="300>
 
 
 
