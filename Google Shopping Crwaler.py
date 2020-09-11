@@ -7,7 +7,6 @@ import pyautogui
 import argparse
 
 
-
 # parser = argparse.ArgumentParser(description='Crawl google shopping page and compare price with the target price.')
 # parser.add_argument('TargetPrice', metavar='-pr', type=str, nargs='+',
 #                    help='Target price in string (ex."$199.99)')
@@ -18,9 +17,7 @@ import argparse
 #                    help='sum the integers (default: find the max)')
 # args = parser.parse_args()
 
-
 SETTING_PATH = os.path.realpath(os.path.dirname(__file__)) + "/"
-MOVIE_LIST_FILE = SETTING_PATH + "movie_list.txt"
 
 def get_prices():
     product_name = driver.find_element_by_xpath("//div[@class='f0t7kf']").text
@@ -48,30 +45,35 @@ def get_prices():
     return product_name[0], addrList, price_list
 
 
-def txt_editor(data_idx):
-    f = open(MOVIE_LIST_FILE, "r", encoding="utf-8")
-    lines = f.readlines()
-    print("data_idx : ", data_idx)
-    buffer = ""
-    for line in lines:
-        buffer = line
-        fileName = getName(data_idx)
-        print(" Line :: " , line, " data_idx ::", data_idx, "  Name :: ", fileName)
-        if int(line) < int(data_idx):
-            print( " ------->> Update file from ", line, " to ", data_idx)
-            print()
-            buffer = str(data_idx)
-    f = open(MOVIE_LIST_FILE, "w", encoding="utf-8")
-    f.write(buffer)
-    f.close()
+def email_alert(subject, body, to):
+    #  code from @ClarityCoders
+    #  https://www.youtube.com/watch?v=B1IsCbXp0uE&feature=youtu.be&ab_channel=ClarityCoders
+
+    msg = EmailMessage()
+    msg.set_content(body)
+    msg['subject'] = subject
+    msg['to'] = to
+
+    user = "Type_your_email@gmail.com"
+    msg['from'] = user
+    password = "Get This Password.(Refer to youtube link above)"
+
+    server = smtplib.SMTP("smtp.gmail.com", 587)
+    server.starttls()
+    server.login(user, password)
+    server.send_message(msg)
+
+    server.quit()
+
+
+
+## ____ Main ____
 
 options = webdriver.ChromeOptions()
 options.add_argument('headless')
 driver = webdriver.Chrome(chrome_options=options)          # running silent-mode ( no browser )
 # driver = webdriver.Chrome('./chromedriver')              # Uncomment to see browser
 driver.implicitly_wait(3)
-
-
 
 with open('googleShoppingList.csv', 'rt') as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=',')
@@ -94,8 +96,14 @@ with open('googleShoppingList.csv', 'rt') as csvfile:
         for j in good_prices:
             print(j[1], "    \t Site: ", j[2])
 
+        email_alert("**Deal Alert** ", str(j[0] + "\n" + j[1] + "\nSite: " + j[2] + "\nAddr: " + j[3]),
+                    "#########@tmomail.net")
+
+        # Store result in a spreadsheet
         with open('goodPrices.csv', 'a', newline='') as csvfile:
             priceWriter = csv.writer(csvfile, delimiter=' ',
                                     quotechar='|', quoting=csv.QUOTE_MINIMAL)
             for row in good_prices:
                 priceWriter.writerow(row)
+
+email_alert("PyGoogleShopping Tracker", "Ran", "##########@tmomail.net")
