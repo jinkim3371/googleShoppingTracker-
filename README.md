@@ -17,7 +17,7 @@ Chrome version == 83
 <img src="Screenshots/Screenshot4.jpg"  width="600">
 
 ### Run    
-''' Python Google Shopping Crwaler.py  <br>
+    Python Google Shopping Crwaler.py  <br>
     
 ### Reference    
 email_alert method - https://www.digitaltrends.com/mobile/how-to-send-a-text-from-your-email-account/
