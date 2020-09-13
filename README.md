@@ -1,12 +1,11 @@
 # googleShoppingTracker
 googleShoppingTracker tracks target products in Google Shopping and save csv file if price drops below target price.
 <br>
-**- Dependencies -** <br>
-selenium version == 3.141.0 <br>
-webdriver-manager == 3.2.2 <br>
-<br>
-Chrome version == 83 
- <br> <br>
+**- Dependencies -**     
+selenium version == 3.141.0     
+webdriver-manager == 3.2.2    
+Chrome version == 83     
+            
 ** Usage ** <br>
 1.	Search target product in Google Shopping<br>
 <img src="Screenshots/Screenshot1.jpg"  width="600">
