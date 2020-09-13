@@ -1,5 +1,5 @@
 # GoogleShoppingTracker
-GoogleShoppingTracker tracks target products in Google Shopping and save csv file if price drops below target price.
+GoogleShoppingTracker tracks target products in Google Shopping and send SMS alert if price drops below target price.
     
 ## Dependencies         
 selenium version == 3.141.0     
