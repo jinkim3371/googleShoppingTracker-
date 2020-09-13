@@ -1,5 +1,5 @@
 # GoogleShoppingTracker
-GoogleShoppingTracker tracks target products in Google Shopping and send SMS alert if price drops below target price.
+GoogleShoppingTracker tracks target products in Google Shopping and send e-mail/SMS alert if price drops below target price.
     
 ## Dependencies         
 selenium version == 3.141.0     
@@ -21,6 +21,9 @@ Chrome version == 83
 
 ### Run    
     Python Google Shopping Crwaler.py    
+    
+### Note   
+Use batch file and Window Scheduler to automate the tracking.
     
 ### Reference    
 email_alert method - https://www.digitaltrends.com/mobile/how-to-send-a-text-from-your-email-account/
