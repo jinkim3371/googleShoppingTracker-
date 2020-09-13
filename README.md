@@ -1,6 +1,6 @@
-# googleShoppingTracker
-googleShoppingTracker tracks target products in Google Shopping and save csv file if price drops below target price.
-<br>
+# GoogleShoppingTracker
+GoogleShoppingTracker tracks target products in Google Shopping and save csv file if price drops below target price.
+    
 ## Dependencies         
 selenium version == 3.141.0     
 webdriver-manager == 3.2.2    
@@ -18,6 +18,6 @@ Chrome version == 83
 
 Run <br>
             Python Google Shopping Crwaler.py  <br>
- <br>
-<Reference>  <br>
-https://www.digitaltrends.com/mobile/how-to-send-a-text-from-your-email-account/
+    
+### Reference    
+email_alert method - https://www.digitaltrends.com/mobile/how-to-send-a-text-from-your-email-account/
